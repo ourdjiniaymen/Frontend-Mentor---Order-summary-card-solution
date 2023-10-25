@@ -5,6 +5,7 @@
   --very-pale-blue: hsl(225, 100%, 98%);
   --desaturated-blue: hsl(224, 23%, 55%);
   --dark-blue: hsl(223, 47%, 23%);
+  --main-duration: 0.3s;
 }
 /* End Globale Variables */
 
@@ -58,7 +59,7 @@ body {
 
 .card {
   --border-raduis-value: 20px;
-  width: 350px;
+  width: 300px;
   max-height: 100%;
   background-color: #fff;
   border-radius: var(--border-raduis-value);
@@ -66,7 +67,7 @@ body {
 
 @media (min-width: 576px) {
   .card {
-    width: 400px;
+    width: 350px;
   }
 }
 
@@ -132,6 +133,7 @@ body {
   flex-grow: 1;
   text-align: end;
   text-transform: capitalize;
+  transition: var(--main-duration);
 }
 
 .card .card-body .plan .link:hover a {
@@ -161,7 +163,8 @@ body {
   border-radius: 8px;
   color: #fff;
   background-color: var(--bright-blue);
-  box-shadow: 0 20px 10px var(--pale-blue);
+  box-shadow: 0 10px 15px -3px hsl(245, 75%, 52%, 50%);
+  transition: var(--main-duration);
 }
 
 .card .card-body .action .proceed:hover {
@@ -173,6 +176,7 @@ body {
   color: var(--desaturated-blue);
   background: none;
   margin: auto;
+  transition: var(--main-duration);
 }
 
 .card .card-body .action .cancel:hover {
