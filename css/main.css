@@ -17,10 +17,7 @@
 
 body {
   font-family: "Red Hat Display", sans-serif;
-}
-
-ul {
-  list-style: none;
+  font-weight: 500;
 }
 
 h1 {
@@ -29,4 +26,156 @@ h1 {
   font-weight: 400;
   font-size: 1em;
 }
+
+button {
+  display: block;
+  border: none;
+  outline: none;
+}
+
 /* End Globale rules */
+body {
+  background-image: url(../images/pattern-background-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: var(--pale-blue);
+}
+
+@media (min-width: 576px) {
+  body {
+    background-image: url(../images/pattern-background-desktop.svg);
+  }
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  --border-raduis-value: 20px;
+  width: 350px;
+  max-height: 100%;
+  background-color: #fff;
+  border-radius: var(--border-raduis-value);
+}
+
+@media (min-width: 576px) {
+  .card {
+    width: 400px;
+  }
+}
+
+.card .card-header img {
+  width: 100%;
+  vertical-align: middle;
+  border-top-left-radius: var(--border-raduis-value);
+  border-top-right-radius: var(--border-raduis-value);
+}
+
+.card .card-body {
+  padding: 25px 20px;
+}
+
+.card .card-body .text {
+  text-align: center;
+}
+
+.card .card-body .text h1 {
+  color: var(--dark-blue);
+  font-size: 22px;
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 15px;
+}
+
+.card .card-body .text p {
+  color: var(--desaturated-blue);
+  line-height: 1.6;
+}
+
+.card .card-body .plan {
+  display: flex;
+  align-items: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: var(--very-pale-blue);
+  border-radius: 15px;
+}
+
+.card .card-body .plan .icon {
+  margin-right: 15px;
+}
+
+.card .card-body .plan .details {
+  display: flex;
+  flex-direction: column;
+}
+
+.card .card-body .plan .details .duration {
+  color: var(--dark-blue);
+  font-weight: 900;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+
+.card .card-body .plan .details .price {
+  color: var(--desaturated-blue);
+}
+
+.card .card-body .plan .link {
+  flex-grow: 1;
+  text-align: end;
+  text-transform: capitalize;
+}
+
+.card .card-body .plan .link:hover a {
+  text-decoration: none;
+  opacity: 0.7;
+}
+
+.card .card-body .plan .link a {
+  color: var(--bright-blue);
+  font-weight: 700;
+}
+
+.card .card-body .action {
+  text-align: center;
+  font-weight: 700;
+}
+
+.card .card-body .action button {
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.card .card-body .action .proceed {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  color: #fff;
+  background-color: var(--bright-blue);
+  box-shadow: 0 20px 10px var(--pale-blue);
+}
+
+.card .card-body .action .proceed:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+.card .card-body .action .cancel {
+  color: var(--desaturated-blue);
+  background: none;
+  margin: auto;
+}
+
+.card .card-body .action .cancel:hover {
+  cursor: pointer;
+  color: var(--dark-blue);
+}
